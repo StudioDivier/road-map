@@ -1,0 +1,84 @@
+@import "../../../common/colors";
+@import "../../../common/mixins";
+@import "../../../common/screen";
+@import "../../../common/variables";
+
+.main-slider {
+  @include py(50px, 50px);
+
+  .inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+
+    .slick-arrow {
+      display: none !important;
+      @include min-w(1750) {
+        display: block !important;
+      }
+      @media screen and (min-width: 1070px) and (max-width: 1200px) {
+        display: block !important;
+      }
+      @media screen and (min-width: 840px) and (max-width: 992px) {
+        display: block !important;
+      }
+      @media screen and (min-width: 650px) and (max-width: 768px) {
+        display: block !important;
+      }
+    }
+
+    .slick-track {
+      @include my(15px, 15px);
+    }
+
+    .single-slide {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      @include mx(20px, 20px);
+      @include py(20px, 20px);
+
+      img {
+        margin: 0 auto;
+        @include lg-max {
+          width: 105px;
+        }
+        @include md-max {
+          width: 85px;
+        }
+      }
+
+      a {
+        color: black;
+        @include py(30px, 15px);
+        @include md-max {
+          @include py(20px, 15px);
+        }
+
+        span {
+          font-size: 18px;
+          @include lg-max {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .event-date {
+        font-weight: 600;
+        font-size: 50px;
+        color: #474747;
+        @include xl-max {
+          font-size: 40px;
+        }
+        @include lg-max {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

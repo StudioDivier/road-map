@@ -1,0 +1,256 @@
+@import "common/colors";
+@import "common/mixins";
+@import "common/screen";
+@import "common/variables";
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input, button, .single-slide, a, .slick-slide {
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+body {
+  //position: relative;
+}
+
+// Bootstrap Container
+@include xl-min {
+  header, .main-banner, .main-menu {
+    .container {
+      max-width: 1440px
+    }
+  }
+}
+
+@include xxl-min {
+  header, .main-banner, .main-menu {
+    .container {
+      max-width: 1650px
+    }
+  }
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 20px;
+  @include md-max {
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-weight: 600;
+    color: $blue-color;
+    font-size: 50px;
+    margin-right: 25px;
+
+    @include xl-max {
+      font-size: 40px;
+    }
+
+    @include md-max {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.blue-outline, .red-outline, .yellow-outline, .white-outline {
+  width: auto;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  border-radius: 30px;
+  border: 1px solid $blue-color;
+  color: $blue-color;
+  padding: 12.5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-color;
+    color: white;
+
+    img {
+      content: url("../img/icons/arrow_right-white.svg");
+    }
+  }
+
+  img {
+    margin-right: 17.5px;
+  }
+
+  span {
+    padding-right: 7.5px;
+  }
+
+  @include xl-max {
+    padding: 12.5px;
+  }
+  @include md-max {
+    padding: 7.5px 10px;
+    font-size: 11px;
+    img {
+      width: 15px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.red-outline {
+  color: $red-color;
+  border: 1px solid $red-color;
+
+  &:hover {
+    background-color: $red-color;
+    font-weight: 600;
+  }
+}
+
+.white-outline {
+  color: white;
+  border: 1px solid white;
+  padding: 7.5px 15px;
+
+  &:hover {
+    background-color: white;
+    color: $blue-color;
+    font-weight: 600;
+  }
+}
+
+.yellow-outline {
+  color: black;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: $yellow-color;
+    border: 1px solid $yellow-color;
+    color: black;
+    font-weight: 600;
+
+    img {
+      content: url("../img/icons/arrow_right-black.svg");
+    }
+  }
+}
+
+
+header {
+  .nav-wrapper {
+    background-color: $background-color;
+
+    .navbar-brand {
+      @include xl-max {
+        margin: 0;
+        padding-bottom: 15px;
+      }
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: center;
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        padding-bottom: 15px;
+      }
+    }
+
+    .nav-item {
+      font-size: 16px;
+      border-bottom: 1px solid transparent;
+      margin: 0 25px;
+      display: flex;
+      align-items: center;
+      @include lg-max {
+        width: 100%;
+        padding: 5px;
+      }
+
+      .nav-link {
+        padding-top: 0;
+        padding-bottom: 0;
+        text-decoration: none;
+        @include lg-max {
+          width: 100%;
+          font-size: 14px;
+        }
+      }
+
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+    }
+
+    .hidden-input {
+      @include lg-min {
+        display: none;
+      }
+
+      @include lg-max {
+        form {
+          width: 100%;
+
+          input {
+            width: 100%;
+            font-size: 14px;
+          }
+        }
+      }
+
+      &:hover {
+        border-bottom: 0;
+      }
+    }
+
+    .slideLeft-animation {
+      display: block;
+      animation-name: slideLeft;
+      -webkit-animation-name: slideLeft;
+
+      animation-duration: 0.85s;
+      -webkit-animation-duration: 0.85s;
+
+      animation-timing-function: ease;
+      -webkit-animation-timing-function: ease;
+    }
+
+    @keyframes slideLeft {
+      0% {
+        opacity: 0.1;
+        transform: translateX(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  .bg-light {
+    background-color: $background-color !important;
+    @include xl-max {
+      justify-content: center;
+    }
+    @include lg-max {
+      ul {
+        flex-wrap: wrap;
+        //padding-top: 15px;
+
+        .zoom-button, .facebook-button, .choose-lang {
+          margin: 0;
+          width: 33%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+  }
+}

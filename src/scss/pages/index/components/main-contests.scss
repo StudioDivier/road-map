@@ -1,0 +1,98 @@
+@import "../../../common/colors";
+@import "../../../common/mixins";
+@import "../../../common/screen";
+@import "../../../common/variables";
+
+.main-contests {
+  @include py(50px, 50px);
+
+  .col-md-12 {
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include md-max {
+    .col-md-7 {
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .header-wrapper {
+    h2 {
+      color: $yellow-color;
+    }
+  }
+
+  .xl {
+    height: 100%;
+
+    .top-block {
+      height: 80%;
+      @include md-max {
+        height: 200px;
+      }
+    }
+
+    .bottom-block {
+      height: 20%;
+      @include md-max {
+        height: calc(100% - 200px);;
+      }
+    }
+  }
+
+  .sm {
+    height: 100%;
+
+    .top-block {
+      height: 225px;
+      @include md-max {
+        height: 200px;
+      }
+    }
+
+    .bottom-block {
+    }
+
+  }
+
+  .contest-detail {
+    .top-block {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .bottom-block {
+      background-color: $yellow-color;
+      position: relative;
+      color: white;
+      padding: 20px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include md-max {
+        font-size: 13px;
+      }
+
+      .block-header {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .date-block {
+        text-align: right;
+        padding-top: 15px;
+      }
+    }
+  }
+}

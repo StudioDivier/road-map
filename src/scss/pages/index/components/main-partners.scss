@@ -1,0 +1,25 @@
+@import "../../../common/colors";
+@import "../../../common/mixins";
+@import "../../../common/screen";
+@import "../../../common/variables";
+
+.main-partners {
+  @include py(50px, 100px);
+
+  .rus-partners-slider, .de-partners-slider {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 25px 75px;
+    .img-wrapper {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .slider-wrapper {
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+}

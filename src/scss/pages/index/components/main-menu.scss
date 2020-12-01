@@ -1,0 +1,124 @@
+@import "../../../common/colors";
+@import "../../../common/mixins";
+@import "../../../common/screen";
+@import "../../../common/variables";
+
+.main-menu {
+
+    background-color: $blue-color;
+
+    .navbar {
+      background-color: $blue-color !important;
+      position: relative;
+      @include xl-max {
+        @include py(10px, 10px)
+      }
+      @include md-max {
+        display: flex;
+        justify-content: end;
+        @include py(7.5px, 7.5px);
+      }
+      padding-top: 0;
+      padding-bottom: 0;
+
+      ul {
+        display: flex;
+
+        li {
+          width: 14.28%;
+          @include xl-max {
+            width: 20%;
+          }
+          @include lg-max {
+            width: 33%;
+          }
+          @include md-max {
+            width: 100%;
+          }
+        }
+      }
+
+      .navbar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .nav-item {
+          padding: 50px 22px;
+          @include xxl-max {
+            padding: 40px 15px;
+          }
+          color: white;
+          display: flex;
+          justify-content: center;
+          @include md-max {
+            padding: 10px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: $yellow-color;
+            color: white;
+            border-radius: 20px;
+
+            .item1 {
+              content: url('../../../../img/icons/main-menu/img1Black.svg');
+            }
+
+            .item2 {
+              content: url('../../../../img/icons/main-menu/img2Black.svg');
+            }
+
+            .item3 {
+              content: url('../../../../img/icons/main-menu/img3Black.svg');
+            }
+
+            .item4 {
+              content: url('../../../../img/icons/main-menu/img4Black.svg');
+            }
+
+            .item5 {
+              content: url('../../../../img/icons/main-menu/img5Black.svg');
+            }
+
+            .item6 {
+              content: url('../../../../img/icons/main-menu/img6Black.svg');
+            }
+
+            .item7 {
+              content: url('../../../../img/icons/main-menu/img7Black.svg');
+            }
+
+          }
+
+          .inner-wrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 400;
+            max-width: 179px;
+            @include max-w(1502) {
+              font-size: 18px;
+            }
+            @include max-w(1250) {
+              font-size: 16px;
+            }
+            @include md-max {
+              font-size: 14px;
+            }
+
+            .img-wrapper {
+              @include md-max {
+                display: none;
+              }
+              height: 77px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }

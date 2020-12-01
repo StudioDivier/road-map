@@ -1,0 +1,63 @@
+.main-contests {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .main-contests .col-md-12:first-child {
+    margin-bottom: 20px; }
+  @media (max-width: 768px) {
+    .main-contests .col-md-7:first-child {
+      margin-bottom: 20px; } }
+  .main-contests .header-wrapper h2 {
+    color: #F5CE00; }
+  .main-contests .xl {
+    height: 100%; }
+    .main-contests .xl .top-block {
+      height: 80%; }
+      @media (max-width: 768px) {
+        .main-contests .xl .top-block {
+          height: 200px; } }
+    .main-contests .xl .bottom-block {
+      height: 20%; }
+      @media (max-width: 768px) {
+        .main-contests .xl .bottom-block {
+          height: calc(100% - 200px); } }
+  .main-contests .sm {
+    height: 100%; }
+    .main-contests .sm .top-block {
+      height: 225px; }
+      @media (max-width: 768px) {
+        .main-contests .sm .top-block {
+          height: 200px; } }
+  .main-contests .contest-detail .top-block {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .main-contests .contest-detail .bottom-block {
+    background-color: #F5CE00;
+    position: relative;
+    color: white;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media (max-width: 768px) {
+      .main-contests .contest-detail .bottom-block {
+        font-size: 13px; } }
+    .main-contests .contest-detail .bottom-block .block-header {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden; }
+    .main-contests .contest-detail .bottom-block .date-block {
+      text-align: right;
+      padding-top: 15px; }

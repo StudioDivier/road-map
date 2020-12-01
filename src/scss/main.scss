@@ -1,0 +1,17 @@
+@import "common/colors";
+@import "common/mixins";
+@import "common/screen";
+@import "common/variables";
+
+main {
+  .main-banner {
+    @include lg-max {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
