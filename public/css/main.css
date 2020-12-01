@@ -1,6 +1,19 @@
-@media (max-width: 992px) {
-  main .main-banner {
-    display: none; } }
-
-main .main-banner img {
-  width: 100%; }
+main .main-banner {
+  background-color: #DCDDDE;
+  overflow: hidden;
+  position: relative; }
+  @media (max-width: 992px) {
+    main .main-banner {
+      display: none; } }
+  main .main-banner .logo {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 400px; }
+    @media (max-width: 1400px) {
+      main .main-banner .logo {
+        width: 300px; } }
+  main .main-banner img:first-child {
+    width: 130%;
+    position: relative;
+    left: -10%; }

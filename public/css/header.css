@@ -192,8 +192,37 @@ header .nav-wrapper {
     -webkit-transform: translateX(0%);
             transform: translateX(0%); } }
 
+header .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999999999999999;
+  width: 100%;
+  -webkit-animation: smoothScroll 1s forwards;
+          animation: smoothScroll 1s forwards; }
+
+@-webkit-keyframes smoothScroll {
+  0% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px); }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@keyframes smoothScroll {
+  0% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px); }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
 header .bg-light {
-  background-color: #DCDDDE !important; }
+  background-color: #DCDDDE !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  header .bg-light .zoom-button img {
+    cursor: pointer; }
   @media (max-width: 1200px) {
     header .bg-light {
       -webkit-box-pack: center;

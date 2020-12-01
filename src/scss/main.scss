@@ -5,12 +5,30 @@
 
 main {
   .main-banner {
+    background-color: $background-color;
+    overflow: hidden;
+    position: relative;
+
     @include lg-max {
       display: none;
     }
 
+    .logo {
+      position: absolute;
+      top: 15%;
+      right: 15%;
+      width: 400px;
+      @include xxl-max {
+        width: 300px;
+      }
+    }
+
     img {
-      width: 100%;
+      &:first-child {
+        width: 130%;
+        position: relative;
+        left: -10%;
+      }
     }
   }
 

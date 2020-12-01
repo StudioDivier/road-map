@@ -42,6 +42,8 @@ $('.main-slider-wrapper').slick({
     ]
 });
 
+// Partners sliders
+
 $('.rus-partners-slider').slick({
     dots: false,
     infinite: true,
@@ -128,4 +130,18 @@ $('.de-partners-slider').slick({
             }
         }
     ]
+});
+
+// Sticky nav
+
+$(window).scroll(function() {
+  let sticky = $('.bg-light'),
+    scroll = $(window).scrollTop();
+
+  if (scroll >= 40) {
+    sticky.addClass('fixed'); }
+  else {
+   sticky.removeClass('fixed');
+
+}
 });
